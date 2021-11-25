@@ -1,0 +1,58 @@
+@import './variables.scss';
+
+html[theme='dark'] {
+  body {
+    color: $black_title;
+    background-color: $black_bg;
+  }
+
+  .user__container {
+    border-color: $black_line;
+  }
+
+  .diagram {
+    background-color: $black_bg;
+    border-color: $black_line;
+  }
+
+  button {
+    background-color: $black_bg;
+    color: $black_title;
+    border-color: $black_title;
+  }
+
+  input[type='text'] {
+    background-color: $black_line;
+    color: $black_title;
+  }
+
+  .color-picker-pic {
+    color: $titles;
+  }
+
+  hr {
+    background-color: $black_line;
+  }
+
+  .list {
+    &__item {
+      &:hover {
+        background-color: $black_line;
+        .list__actions {
+          & > button {
+            background-color: $black_line;
+          }
+        }
+      }
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $black_bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $black_line;
+    border-radius: 4px;
+  }
+}

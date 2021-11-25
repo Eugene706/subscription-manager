@@ -1,0 +1,93 @@
+@import '../../styles/variables.scss';
+@import '../../styles/adaptive_styles.scss';
+
+.main {
+  max-width: 1083px;
+  width: 100%;
+  padding-top: 50px;
+  margin: 0 auto;
+
+  &__header {
+    padding: 0px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include _350 {
+      padding: 0px 25px;
+    }
+
+    & > span {
+      font-size: 28px;
+      font-weight: 500;
+
+      @include _350 {
+        font-size: 24px;
+      }
+    }
+
+    & > button {
+      padding: 9px 15px;
+      display: flex;
+      align-items: center;
+      background-color: $white_bg;
+      border: 2px solid $titles;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 400;
+
+      @include _350 {
+        font-size: 18px;
+      }
+
+      & > span {
+        margin-right: 9px;
+      }
+    }
+  }
+}
+
+.list {
+  margin-top: 54px;
+
+  &__items {
+    max-height: 547px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    @include _600 {
+      font-size: 18px;
+    }
+  }
+
+  &__service {
+    flex: 2;
+  }
+
+  &__price-text {
+    flex: 4;
+  }
+
+  &__payment-text {
+    flex: 2;
+
+    @include _600 {
+      margin-right: 15px;
+    }
+  }
+
+  & > hr {
+    height: 2px;
+    margin: 13px 0px 29px 0px;
+    background-color: $white_line;
+    transition: background-color 0.2s;
+  }
+}

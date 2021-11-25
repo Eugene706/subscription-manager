@@ -1,0 +1,140 @@
+@import '../../styles/variables.scss';
+@import '../../styles/adaptive_styles.scss';
+
+.input {
+  padding: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include _350 {
+    padding: 7px;
+  }
+
+  &__color-picker-cont {
+    flex: 1;
+  }
+
+  &__color-switch-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__color-switch {
+    width: 50px;
+    height: 50px;
+    margin-right: 9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__color-picker {
+    position: absolute;
+    top: 90%;
+    left: 3%;
+  }
+
+  input[type='text'] {
+    height: 42px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    transition: background-color 0.2s;
+  }
+
+  input[type='text']:focus {
+    border: 1px solid #52a1f0;
+  }
+
+  .error {
+    border: 1px solid #f04a4a;
+  }
+
+  &__error {
+    position: absolute;
+    top: 110%;
+    color: #f04a4a;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__service-container {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__service {
+    width: 100%;
+  }
+
+  &__price-container {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__price {
+    width: 123px;
+
+    @include _600 {
+      width: 100px;
+    }
+    @include _480 {
+      width: 80px;
+    }
+
+    @include _350 {
+      width: 70px;
+    }
+  }
+
+  &__payment-container {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    & > p {
+      right: 33px;
+    }
+  }
+
+  &__payment {
+    width: 105px;
+
+    @include _600 {
+      width: 90px;
+    }
+    @include _480 {
+      width: 70px;
+    }
+
+    @include _350 {
+      width: 60px;
+    }
+  }
+
+  &__actions {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include _480 {
+    }
+
+    & > button {
+      font-size: 22px;
+      color: $titles;
+      background-color: $white_bg;
+    }
+  }
+}

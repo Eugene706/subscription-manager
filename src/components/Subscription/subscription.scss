@@ -1,0 +1,106 @@
+@import '../../styles/variables.scss';
+@import '../../styles/adaptive_styles.scss';
+
+.animation {
+  opacity: 0;
+  transform: translateX(70%);
+  transition: 0.5s;
+}
+
+.list {
+  &__item {
+    padding: 14px;
+    margin: 0px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 17px;
+
+    @include _600 {
+      padding: 22px 10px;
+    }
+
+    &:hover {
+      background-color: white;
+
+      .list__actions {
+        & > button {
+          background-color: white;
+        }
+
+        transition: 0.2s;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include _600 {
+      display: none;
+    }
+  }
+
+  &__logo-bg {
+    width: 50px;
+    height: 50px;
+    opacity: 0.3;
+    border-radius: 10px;
+  }
+
+  &__logo-text {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__name {
+    flex: 3;
+
+    @include _480 {
+      font-size: 22px;
+    }
+  }
+
+  &__price {
+    flex: 3;
+    text-align: center;
+    font-weight: 700;
+
+    @include _480 {
+      font-size: 22px;
+    }
+  }
+
+  &__payment {
+    flex: 3;
+    text-align: right;
+
+    @include _480 {
+      font-size: 22px;
+    }
+  }
+
+  &__actions {
+    opacity: 0;
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+
+    & > button {
+      font-size: 20px;
+      color: $titles;
+      opacity: 0.7;
+      background-color: $white_bg;
+      &:hover {
+        opacity: 1;
+        transition: 0.3s;
+      }
+    }
+  }
+}
